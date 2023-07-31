@@ -1,4 +1,5 @@
 create table asdded(
     id int,
-    ass varchar
+    ass varchar,
+    name varchar
 )
