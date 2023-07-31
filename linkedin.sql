@@ -1,3 +1,4 @@
-create table added(
-    id int
+create table asdded(
+    id int,
+    ass varchar
 )
