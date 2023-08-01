@@ -123,6 +123,7 @@ end if;
 return true;
 end
 $$;
+
 create or replace function eidt_company(
     i_id int,
     i_name varchar default null,
