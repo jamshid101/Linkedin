@@ -10,7 +10,7 @@ as
 $$
 declare
 BEGIN
-    if check_id_exists('post', i_id)=false then return false end if;
+    if check_id_exists('post', i_id)=false then return false; end if;
     if i_context is not null then
 UPDATE post
 SET context = i_context
@@ -43,7 +43,7 @@ as
 $$
 declare
 BEGIN
-    if check_id_exists('comment', i_id)=false then return false end if;
+    if check_id_exists('comment', i_id)=false then return false; end if;
     if i_date is not null then
 UPDATE comment
 SET date = i_date
@@ -73,7 +73,7 @@ as
 $$
 declare
 BEGIN
-    if check_id_exists('user', i_id)=false then return false end if;
+    if check_id_exists('user', i_id)=false then return false; end if;
     if i_first_name is not null then
 UPDATE user
 SET first_name = i_first_name
@@ -113,7 +113,7 @@ as
 $$
 declare
 BEGIN
-    if check_id_exists('experience', i_id)=false then return false end if;
+    if check_id_exists('experience', i_id)=false then return false; end if;
     if i_start_date is not null then
 UPDATE experience
 SET start_date = i_start_date
@@ -139,7 +139,7 @@ as
 $$
 declare
 BEGIN
-    if check_id_exists('company', i_id)=false then return false end if;
+    if check_id_exists('company', i_id)=false then return false; end if;
     if i_name is not null then
 UPDATE company
 SET name = i_name
@@ -156,7 +156,7 @@ $$;
 CREATE OR REPLACE FUNCTION check_id_exists(
     table_name VARCHAR,
     id_value INT
-)
+)s
     RETURNS BOOLEAN
     LANGUAGE plpgsql
 AS

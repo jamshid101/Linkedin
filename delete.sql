@@ -6,7 +6,7 @@ CREATE OR REPLACE FUNCTION delete_post(
 AS
 $$
 BEGIN
-    if check_id_exists('post', i_id)=false then return false end if;
+    if check_id_exists('post', i_id)=false then return false; end if;
 DELETE FROM post
 WHERE id = i_id;
 
@@ -25,7 +25,7 @@ CREATE OR REPLACE FUNCTION delete_comment(
 AS
 $$
 BEGIN
-    if check_id_exists('comment', i_id)=false then return false end if;
+    if check_id_exists('comment', i_id)=false then return false; end if;
 DELETE FROM comment
 WHERE id = i_id;
 
@@ -44,7 +44,7 @@ CREATE OR REPLACE FUNCTION delete_user(
 AS
 $$
 BEGIN
-    if check_id_exists('user', i_id)=false then return false end if;
+    if check_id_exists('user', i_id)=false then return false; end if;
 DELETE FROM "user"
 WHERE id = i_id;
 
@@ -63,7 +63,7 @@ CREATE OR REPLACE FUNCTION delete_experience(
 AS
 $$
 BEGIN
-    if check_id_exists('experience', i_id)=false then return false end if;
+    if check_id_exists('experience', i_id)=false then return false; end if;
 DELETE FROM experience
 WHERE id = i_id;
 
